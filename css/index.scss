@@ -1,7 +1,8 @@
 body{
   background-color: #F3F3F3;
   font-family: 'Work Sans', sans-serif;  
-
+  margin: 0;
+  overflow-x: hidden;
 }
 .hide{
   opacity: 0!important;
@@ -10,16 +11,28 @@ body{
   padding: 0!important;
   overflow: hidden!important;
 }
-.hide2{
-  display: none;
-}
+
 header{
   display: flex;
   justify-content: space-between;
+  .hamburger{
+    position: fixed;
+    top: 21px;
+    right: 12px;
+    font-size: 20px;
+    display: none;
+    align-items: center;
+    @media (max-width:500px) {
+      display: flex;
+      margin-right: 16px;
+      z-index: 3;
+    }
+  }
 
   nav{
     display: flex;
     align-items: center;
+    
     li{
       list-style: none;
       margin: auto 10px;
@@ -44,6 +57,7 @@ header{
       width: 25px;
     height: 25px;
     margin-right: 10px;
+    margin-left: 20px;
     border-radius: 100px;
     background-color: #95d1ce;
   }
@@ -57,23 +71,74 @@ header{
     cursor: pointer;
   }
 }
+nav:nth-child(2){
+  @media (max-width:500px) {
+    display: none;
+  }
+}
+.navegacion2{
+  opacity: 0;
+  flex-direction: column;
+  display: flex;
+  justify-content:center;
+  text-align: center;
+  position: fixed;
+  background:  #006d67;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  left: -100vw;
+  transition: 1s; 
+  li{
+    font-size: 20px;
+    margin: 20px auto;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600px;
+  }
+  li:nth-child(2){
+    border-right: none;
+    border-left: none;
+    margin: 0;
+  }
+}
+}
+
+.is-active{
+  opacity: 1!important;
+  left: 0vw!important;
 }
 main{
   opacity: 1;
   margin: 100px auto;
   transition: 1s ease-in;
+  @media (max-width:500px) {
+    margin:20px auto ;
+  }
   .contenedor{
     display: flex;
     justify-content: center;
+    @media (max-width:500px) {
+      flex-direction: column;
+      align-items: center;
+    }
     figure{
-      width: 35%;
+      width: 35%; 
+      @media (max-width:500px) {
+        width: 60%;
+      }
       img{
         width: 100%;
         border-radius: 300px;
+        
       }
     }
     .contenedor_informacion{
       width: 40%;
+      @media (max-width:500px) {
+        width: 90%;
+      }
       .texto{
         h2{
           font-size: 100px;
@@ -81,6 +146,11 @@ main{
           margin-top: 40px;
           margin-bottom: 10px;
           margin-left: -5px;
+          @media (max-width:500px) {
+            font-size: 40px;
+            margin-top: 0;
+            margin-bottom: 5px;
+          }
         }
         h3{
           font-size: 22px;
@@ -92,6 +162,9 @@ main{
           font-weight: 400;
           line-height: 24px;
           color: black;
+          @media (max-width:500px) {
+            text-align: justify;;
+          }
         }
       }
     }
@@ -102,18 +175,27 @@ main{
   opacity: 1;
   margin: 100px;
   transition: 1s ease-in;
-
+  @media (max-width:500px) {
+    width: 80%;
+    margin: auto;
+  }
   h2{
     margin-left: 6%;
     font-size: 40px;
     font-weight: 600;
     margin-bottom: 50px;
+    @media (max-width:500px) {
+      text-align: center;
+    }
   }
   figure{
     i{
       padding-top: 10px;
       font-size: 20px;
       display: none;
+      @media (max-width:500px) {
+        display: inline-block;
+      }
     }
     i:nth-child(1){
       margin-right: 5px;
@@ -128,8 +210,15 @@ main{
       width: 88%;
       margin: auto;
       display: flex;
+      @media (max-width:500px) {
+        width: 100%;
+        flex-direction: column;
+      }
       .texto{
         width: 70%;
+        @media (max-width:500px) {
+          width: 100%;
+        }
         h3{
           font-size: 30px;
         }
@@ -145,6 +234,10 @@ main{
       figure{
         width: 60%;
         align-self: flex-end;
+        @media (max-width:500px) {
+          width: 100%;
+          margin: auto;
+        }
         img{
           width: 100%;
         }
@@ -159,34 +252,64 @@ main{
   margin:100px ;
   opacity: 1;
   transition: 1s ease-in;
-
+@media (max-width:500px) {
+  margin: auto;
+}
   h2{
    
     margin-left: 6%;
     font-size: 40px;
     font-weight: 600;
     margin-bottom: 50px;
+    @media (max-width:500px) {
+      margin-left: 0;
+      margin-bottom: 10px;
+      text-align: center;
+    }
   }
   .habilidades-blandas{
     display: flex;
     justify-content: space-around;
+    @media (max-width:500px) {
+      flex-direction: column;
+    }
     h3{
       font-size: 30px;
       width:300px ;
+      @media (max-width:500px) {
+        width: auto;
+        text-align: center;
+        margin: 10px auto;
+      }
     }
     .habilidad{
       width: 50%;
       text-align: justify;
       margin-top: 14px;
+      @media (max-width:500px) {
+        width: 80%;
+        text-align: justify;
+        margin: auto;
+        margin-top: 14px;
+      }
       .item{
         h4{
           font-size: 20px;
           margin-bottom: 6px;
+          @media (max-width:500px) {
+            text-align: center;
+          }
         }
       }
     }
   }
   
+}
+
+article.habilidades-blandas:nth-child(2) > div:nth-child(2) {
+  @media (max-width:500px) {
+    text-align: center;
+  }
 }
 
 .links{
@@ -203,6 +326,12 @@ main{
     font-weight: 500;
     cursor:pointer;
     transition: background .5s;
+    @media (max-width:500px) {
+      height: 105px;
+    }
+    @media (max-width:390px) {
+      height: 90px;
+    }
   }
   
   .circulo-links:first-child{
@@ -233,6 +362,9 @@ main{
   a{
     text-align: center;
     margin: auto 5px;
+    @media (max-width:500px) {
+      font-size: 14px;
+    }
   }
 }
 body > section > hr{
@@ -241,6 +373,9 @@ body > section > hr{
 hr{
   width: 80%;
   border-top: 1px solid rgba(119, 116, 116, 0.463);
+  @media (max-width:500px) {
+    width: 99%;
+  }
 }
 
 .contacto{
@@ -251,8 +386,15 @@ hr{
   .container{
     display: flex;
     justify-content: center;
+    @media (max-width:500px) {
+      flex-direction: column;
+      align-items: center;
+    }
     figure{
       margin-left: -70px;
+      @media (max-width:500px) {
+        margin: auto;
+      }
     }
     .contact{
       text-align: center;
@@ -356,9 +498,27 @@ footer{
  .contacts{
   display: flex;
   justify-content: space-evenly;
+  @media (max-width:500px) {
+    flex-direction: column;
+    text-align: center;
+  }
+  h3{
+      @media (max-width:500px) {
+        margin-bottom: 5px;
+      }
+  }
+  p{
+    @media (max-width:500px) {
+      margin-top: 0;
+    }
+  }
  .contact:nth-child(4){
   p:nth-child(1){
     margin-bottom: 18.70px;
+    @media (max-width:500px) {
+      margin-top: 18.7px;
+      margin-bottom: 0;
+    }
   }
  }
   

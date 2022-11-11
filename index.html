@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./css/index.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -16,10 +16,20 @@
       <div class="circulo"></div>
       <h1 onclick="showMain()">Frank Aveiga</h1><span onclick="showMain()">Dev full stack</span>
     </nav>
+   
     <nav>
       <li onclick="showHabilidades()">Habilidades</li>
       <li onclick="showProyectos()">Proyectos</li>
       <li onclick="showContacto()">Contacto</li>
+    </nav>
+    <div class="hamburger">
+      <i class="fa-solid fa-bars burger-button"></i>
+    </div>
+
+    <nav class="navegacion2">
+      <li onclick="showHabilidades();hideShow()">Habilidades</li>
+      <li onclick="showProyectos();hideShow()">Proyectos</li>
+      <li onclick="showContacto();hideShow()">Contacto</li>
     </nav>
   </header>
 
@@ -27,13 +37,13 @@
   <main class="" id="main">
     <div class="contenedor">
       <figure>
-        <img src="./img.jpg" alt="">
+        <img src="./images/img.jpg" alt="Frank Aveiga">
       </figure>
       <div class="contenedor_informacion">
 
         <div class="texto">
           <h2>Bienvenido</h2>
-          <h3>Hola, Soy Frank. Encantado de conocerte</h3>
+          <h3>Hola, Soy Frank. Desarrollador Full Stack (Mern)</h3>
           <p>Desde que comence mi viaje como desarrollador web he realizado varios Proyectos
             de diversa complejidad desde landings pages hasta e-commerce. Constantemente estoy capacitandome
             para mejorar mis habilidades.
@@ -56,34 +66,6 @@
 
   <section class="habilidades hide  " id="habilidades">
     <h2>Habilidades</h2>
-    <article class="habilidades-blandas">
-      <h3>Habilidades blandas</h3>
-      <div class="habilidad">
-        <div class="item">
-          <h4>Comunicación y escucha activa</h4>
-          <p>Cuando alguien me está hablando sobre algún tema en específico, escucho con atención y solo doy mi opinión una vez que la idea haya concluido. </p>
-        </div>
-      
-        <div class="item">
-          <h4>Planificación y gestión del tiempo</h4>
-          <p>Tengo una muy buena organización de mis actividades diarias, para así poder cumplir con todas mis actividades correspondientes con un muy buen rendimiento.</p>
-        </div>
-        <div class="item">
-          <h4>Aprendizaje activo</h4>
-          <p>Estoy constantemente capacitándome y actualizando mis conocimientos lo tomo ya como parte de mi vida.</p>
-        </div>
-        <div class="item">
-          <h4>Proactividad</h4>
-          <p>Siempre que veo una posible problemática trato de resolverla antes de que se convierta en una situación incontrolable, en caso de que no este en mis manos resolverlo, siempre doy posibles soluciones.</p>
-        </div>
-        <div class="item">
-          <h4>Liderazgo</h4>
-          <p>Tengo la capacidad de motivar a los que me rodean para que todos demos lo mejor de nosotros mismos</p>
-        </div>
-      </div>
-    </article>
-
-    <hr>
     <article class="habilidades-blandas">
       <h3>Habilidades Duras</h3>
       <div class="habilidad">
@@ -115,6 +97,36 @@
         
       </div>
     </article>
+
+    <hr>
+
+    <article class="habilidades-blandas">
+      <h3>Habilidades blandas</h3>
+      <div class="habilidad">
+        <div class="item">
+          <h4>Comunicación y escucha activa</h4>
+          <p>Cuando alguien me está hablando sobre algún tema en específico, escucho con atención y solo doy mi opinión una vez que la idea haya concluido. </p>
+        </div>
+      
+        <div class="item">
+          <h4>Planificación y gestión del tiempo</h4>
+          <p>Tengo una muy buena organización de mis actividades diarias, para así poder cumplir con todas mis actividades correspondientes con un muy buen rendimiento.</p>
+        </div>
+        <div class="item">
+          <h4>Aprendizaje activo</h4>
+          <p>Estoy constantemente capacitándome y actualizando mis conocimientos lo tomo ya como parte de mi vida.</p>
+        </div>
+        <div class="item">
+          <h4>Proactividad</h4>
+          <p>Siempre que veo una posible problemática trato de resolverla antes de que se convierta en una situación incontrolable, en caso de que no este en mis manos resolverlo, siempre doy posibles soluciones.</p>
+        </div>
+        <div class="item">
+          <h4>Liderazgo</h4>
+          <p>Tengo la capacidad de motivar a los que me rodean para que todos demos lo mejor de nosotros mismos</p>
+        </div>
+      </div>
+    </article>
+    
   </section>
 
 <section class="proyectos hide  " id="proyectos">
@@ -301,5 +313,6 @@
   <script src="https://kit.fontawesome.com/276faf51c6.js" crossorigin="anonymous"></script>
   <script src="./js/contact.js"></script>
   <script src="./js/menu.js"></script>
+  <script src="./js/hamburger.js"></script>
 </body>
 </html>
