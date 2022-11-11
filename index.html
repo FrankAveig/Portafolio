@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title>Frank Aveiga</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="circulo"></div>
+      <h1 onclick="showMain()">Frank Aveiga</h1><span onclick="showMain()">Dev full stack</span>
+    </nav>
+    <nav>
+      <li onclick="showHabilidades()">Habilidades</li>
+      <li onclick="showProyectos()">Proyectos</li>
+      <li onclick="showContacto()">Contacto</li>
+    </nav>
+  </header>
+
+
+  <main class="" id="main">
+    <div class="contenedor">
+      <figure>
+        <img src="./img.jpg" alt="">
+      </figure>
+      <div class="contenedor_informacion">
+
+        <div class="texto">
+          <h2>Bienvenido</h2>
+          <h3>Hola, Soy Frank. Encantado de conocerte</h3>
+          <p>Desde que comence mi viaje como desarrollador web he realizado varios Proyectos
+            de diversa complejidad desde landings pages hasta e-commerce. Constantemente estoy capacitandome
+            para mejorar mis habilidades.
+          </p>
+        </div>
+        <div class="links">
+          <div onclick="showHabilidades()" class="circulo-links">
+            <a>Habilidades</a>
+          </div>
+          <div onclick="showProyectos()" class="circulo-links" >
+            <a>Proyectos</a>
+          </div>
+          <div onclick="showContacto()" class="circulo-links">
+            <a>Contacto</a>
+          </div>
+        </div>
+      </div>
+      </div>
+  </main>
+
+  <section class="habilidades hide  " id="habilidades">
+    <h2>Habilidades</h2>
+    <article class="habilidades-blandas">
+      <h3>Habilidades blandas</h3>
+      <div class="habilidad">
+        <div class="item">
+          <h4>Comunicación y escucha activa</h4>
+          <p>Cuando alguien me está hablando sobre algún tema en específico, escucho con atención y solo doy mi opinión una vez que la idea haya concluido. </p>
+        </div>
+      
+        <div class="item">
+          <h4>Planificación y gestión del tiempo</h4>
+          <p>Tengo una muy buena organización de mis actividades diarias, para así poder cumplir con todas mis actividades correspondientes con un muy buen rendimiento.</p>
+        </div>
+        <div class="item">
+          <h4>Aprendizaje activo</h4>
+          <p>Estoy constantemente capacitándome y actualizando mis conocimientos lo tomo ya como parte de mi vida.</p>
+        </div>
+        <div class="item">
+          <h4>Proactividad</h4>
+          <p>Siempre que veo una posible problemática trato de resolverla antes de que se convierta en una situación incontrolable, en caso de que no este en mis manos resolverlo, siempre doy posibles soluciones.</p>
+        </div>
+        <div class="item">
+          <h4>Liderazgo</h4>
+          <p>Tengo la capacidad de motivar a los que me rodean para que todos demos lo mejor de nosotros mismos</p>
+        </div>
+      </div>
+    </article>
+
+    <hr>
+    <article class="habilidades-blandas">
+      <h3>Habilidades Duras</h3>
+      <div class="habilidad">
+        <div class="item">
+          <h4>Dominio del Idiomas</h4>
+          <p>Inglés - Nivel B2 certificado (ECCE)</p>
+          <p>Español - Nativo</p>
+        </div>
+      
+        <div class="item">
+          <h4>Lenguajes de Front-end</h4>
+          <p>Html - Nivel avanzado</p>
+          <p>Css - Nivel intermedio</p>
+          <p>Sass - Nivel intermedio</p>
+          <p>Javascript - Nivel intermedio</p>
+          <p>React - Nivel intermedio</p>
+        </div>
+        <div class="item">
+          <h4>Lenguajes de Back-end</h4>
+          <p>Node Js - Nivel intermedio</p>
+          <p>Express - Nivel intermedio</p>
+          <p>Mongoose - Nivel intermedio</p>
+        </div>
+        <div class="item">
+          <h4>Lenguajes de Base de datos</h4>
+          <p>MongoDb- Nivel Basico</p>
+          <p>Firebase- Nivel Basico</p>
+        </div>
+        
+      </div>
+    </article>
+  </section>
+
+<section class="proyectos hide  " id="proyectos">
+  <h2>Proyectos</h2>
+  <article class="container-proyectos">
+    <div class="proyecto">
+      <div class="texto">
+        <h3>Landing Page</h3>
+        <p>Esta es una landign page creada para una clinica veterinaria cuenta con 5 secciones (Galeria, Servicios, Personal, Contacto, Nosotros)</p>
+        <p>Tecnologías utilizadas: Html | Css | Javascript</p>
+      </div>
+      <figure>
+        <img src="./images/LandingPage.png" alt="">
+        <a href="https://github.com/FrankAveig/Consultorio_Miller" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://frankaveig.github.io/Consultorio_Miller/" target="_blank" ><i class="fas fa-link"></i></a>
+      </figure>
+      
+    </div>
+
+    <div class="proyecto">
+      <div class="texto">
+        <h3>C.R.U.D</h3>
+        <p>Este es un C.R.U.D que guarda los datos en el local Storage 
+          está enfocado en llevar el control de vacunación de una o varias mascotas,
+          tiene opciones interesantes como la de un filtro para buscar por alguna palabra 
+          clave ya sea el nombre de la mascota, de la vacuna, o incluso de la fecha de vacunación.
+        </p>
+        <p>Tecnologías utilizadas: Html | Css | Javascript</p>
+      </div>
+      <figure>
+        <img src="./images/CRUD.png" alt="">
+        <a href="https://github.com/FrankAveig/CRUD" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://frankaveig.github.io/CRUD/" target="_blank" ><i class="fas fa-link"></i></a>
+      </figure>
+      
+    </div>
+
+    <div class="proyecto">
+      <div class="texto">
+        <h3>Covid-19 Dashboard </h3>
+        <p>Este es un proyecto colaborativo el cual desarrollamos con <a href="https://github.com/ederramosh" target="_blank">Eder Ramos</a> en el cual consumimos dos APIs para detectar
+          la cantidad de contagiados y de fallecidos por Covid-19 en Latinoamerica se puede hacer comparaciones entre paises
+          y tambien se ve reflejado en graficos 
+        </p>
+        <p>Tecnologías utilizadas: Html | Css | Javascript</p>
+      </div>
+      <figure>
+        <img src="./images/CovidDashboard.png" alt="">
+        <a href="https://github.com/ederramosh/covid-dashboard" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://ederramosh.github.io/covid-dashboard/" target="_blank" ><i class="fas fa-link"></i></a>
+      </figure>
+      
+    </div>
+
+    <div class="proyecto">
+      <div class="texto">
+        <h3>Aplicación de restaurante</h3>
+        <p>Esta aplicación esta aplicación esa enfocada en que un usuario pueda hacer una reservación a un restaurante, cuenta con una sección de login y de registro
+          así mismo el dueño del restaurante a través de su panel de administrador pueda ver todas las reservas hechas por los diferentes usuarios
+          ademas el administrador tambien puede cambiar el menú a través de su panel. 
+        </p>
+        <p>Tecnologías utilizadas: Html | Css | Javascript | React | Firebase</p>
+      </div>
+      <figure>
+        <img src="./images/RestaurantApp.png" alt="">
+        <a href="https://github.com/FrankAveig/Restaurant-App" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://courageous-daffodil-582d79.netlify.app/" target="_blank" ><i class="fas fa-link"></i></a>
+      </figure>
+      
+    </div>
+    <div class="proyecto">
+      <div class="texto">
+        <h3>Api Ecommerce</h3>
+        <p>
+          Esta es una API construida para crear un E-commerce en el repositorio cuenta con una documentación detallada
+          para el consumo de la misma a través de cada uno de sus End Points así como la documentación del código si se quiere hacer
+          uso del mismo
+        </p>
+        <p>Tecnologías utilizadas: NodeJs | Express | Mongoose | MongoDb </p>
+      </div>
+      <figure>
+        <img src="./images/ApiEcommerce.png" alt="">
+        <a href="https://github.com/FrankAveig/api-ecommercee" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://api-ecommercee.vercel.app/v1" target="_blank" ><i class="fas fa-link"></i></a>
+      </figure>
+      
+    </div>
+
+    <div class="proyecto">
+      <div class="texto">
+        <h3>React E-commerce</h3>
+        <p>
+          Esta es una API construida para crear un E-commerce en el repositorio cuenta con una documentación detallada
+          para el consumo de la misma a través de cada uno de sus End Points así como la documentación del código si se quiere hacer
+          uso del mismo
+        </p>
+        <p>Tecnologías utilizadas: NodeJs | Express | Mongoose | MongoDb </p>
+      </div>
+      <figure>
+        <img src="./images/ReactEcommerce.png" alt="">
+        <a href="https://github.com/FrankAveig/react-ecommerce" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://react-ecommerce-brown-omega.vercel.app/" target="_blank" ><i class="fas fa-link"></i></a>
+      </figure>
+      
+    </div>
+
+  </article>
+</section>
+
+<section id="contacto" class="contacto hide  "   >
+  <div class="container" data-aos="zoom-in">
+   <figure>
+    <img src="./images/contact.png" alt="">
+    <div class="contact">
+      <h3>Email</h3>
+      <p>frank@frankaveiga.com</p>
+    </div>
+   </figure>
+
+    
+      
+        <div class="bienvenida__texto  ">
+          <form id="formulario" class="formulario">
+            <h2>Contáctame</h2>
+            <div class="box-input">
+                <input name="nombre" id="nombre" type="text" required placeholder="Nombre">
+            </div>
+
+            <div class="box-input">
+                <input name="apellidos" id="apellidos" type="text" required placeholder="Apellidos">
+            </div>
+            
+            <div class="box-input">
+              <input name="email" id="email" type="email" required placeholder="Correo">
+            </div>
+
+            <div class="box-input">
+              <textarea name="comentarios"  id="comentarios" rows="2"  placeholder="Describe aquí tu consulta"></textarea>
+            </div>
+            
+            <button id="submit" type="submit" class="boton"><i class="fab fa-whatsapp"></i> Enviar WhatsApp</button>
+          </form>
+            
+        
+      
+
+    </div>
+  </div>
+
+</section>
+
+  <hr>
+  <footer>
+    <section class="contacts">
+      <article class="contact">
+        <h3>Teléfono</h3>
+        <p>+593 99 126 93 73</p>
+      </article>
+
+      <article class="contact">
+        <h3>Email</h3>
+        <p>frank@frankaveiga.com</p>
+      </article>
+
+      <article class="contact">
+        <h3>Sigueme</h3>
+        <div class="social">
+          <a href="https://www.facebook.com/frank.aveigaduenas" target="_blank"><i class="fab fa-facebook-square"></i></a>
+          <a href="https://www.instagram.com/frankaveiga93/" target="_blank"> <i class="fab fa-instagram"></i></a>
+          <a href="https://github.com/FrankAveig/" target="_blank"><i class="fab fa-github-square"></i></a>
+          <a href="https://www.linkedin.com/in/frank-aveiga-408663184/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.youtube.com/channel/UCdS4FriGR4NKjQaVmReJsgA" target="_blank"><i class="fab fa-youtube-square"></i></a>
+        </div>
+      </article>
+
+      <article class="contact">
+        <p>Politica de privacidad</p>
+        <p>© 2022 Copyright:<br> Frank Aveiga</p>
+      </article>
+
+    </section>
+    
+  </footer>
+  <script src="https://kit.fontawesome.com/276faf51c6.js" crossorigin="anonymous"></script>
+  <script src="./js/contact.js"></script>
+  <script src="./js/menu.js"></script>
+</body>
+</html>
