@@ -18,7 +18,7 @@ import {doc, getDoc } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-f
 let blogId = decodeURI(location.pathname.split('/').pop());
 
 const docRef = doc(db, "blogs", blogId);
-const docSnap = async() => await getDoc(docRef);
+
 
 const addArticle = (ele,data)=>{
   data = data.split('\n').filter(item=> item.length)
@@ -42,7 +42,6 @@ const addArticle = (ele,data)=>{
         }
         let alt = item.slice(2,separator);
         let src = item.slice(separator + 2, item.length -1 )
-        console.log(src)
         ele.innerHTML += `<img src="${src}" alt="${alt}" class="article-image">`
       }
     else{
@@ -59,19 +58,24 @@ const setupBlog = (data)=>{
   const publish = document.querySelector('.published')
   banner.style.backgroundImage = `url(${data.bannerImage})`
   titleTag.innerHTML += blogTitle.innerHTML = data.title;
-  console.log(data)
   publish.innerHTML += data.publisedAt;
   const article = document.querySelector('.article');
   addArticle(article, data.article)
 }
 
+const docSnaps = async() => {
+  const docSnap = await getDoc(docRef);
+  console.log(docSnap)
+  if (docSnap.exists()) {
+   setupBlog(docSnap.data())
+ } else {
+   // doc.data() will be undefined in this case
+   location.remplace('/');
+ }
+ }
+ 
+ window.onload=docSnaps()
 
 
-if (docSnap.exists()) {
-  setupBlog(docSnap.data())
-} else {
-  // doc.data() will be undefined in this case
-  location.remplace('/');
-}
 
-
+ 

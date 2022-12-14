@@ -13,10 +13,15 @@ const createBlog= (blog)=>{
     <a href="/${blog.id}" class="btn dark">read</a>
   </div>`
 }
-
-const blogs = async() => await getDocs(collection(db, "blogs"));
-blogs.forEach((blog) => {
+const blogs = async() => {
+  const data = await getDocs(collection(db, "blogs"));
+  console.log(data)
+  data.forEach((blog) => {
   if(blog.id !=decodeURI(location.pathname.split('/').pop())){
     createBlog(blog)
   }
 });
+
+}
+
+  window.onload = blogs;
