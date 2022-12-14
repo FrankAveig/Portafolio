@@ -6,12 +6,13 @@ const path = require('path');
 const fileupload = require('express-fileupload')
 
 // Creamos una variable que contenga la ruta completa a la carpeta 'public'
-let initial_path = path.join(__dirname, 'public');
-
+let initial_path = path.join(__dirname, './blogs/public');
+let home_path =  path.join(__dirname, '/public')
 // Creamos una aplicación de express
 const app = express();
 
 // Indicamos que se servirán archivos estáticos desde la carpeta 'public'
+app.use(express.static(home_path));
 app.use(express.static(initial_path));
 
 // Habilitamos el middleware de fileupload en la aplicación
@@ -19,6 +20,9 @@ app.use(fileupload());
 
 // Establecemos una ruta para la página principal del sitio web, que enviará el archivo 'home.js' desde la carpeta 'public' al cliente que realice la solicitud
 app.get('/', (req, res) => {
+  res.sendFile(path.join(home_path, 'index.html'));
+});
+app.get('/blogs', (req, res) => {
   res.sendFile(path.join(initial_path, 'home.html'));
 });
 
@@ -36,7 +40,7 @@ app.post('/upload',(req,res)=>{
   // Creamos un nombre para la imagen basado en la fecha y hora actuales y el nombre del archivo enviado por el cliente
   let imagename= date.getDate() + date.getTime() + file.name
    // Creamos una ruta completa para la imagen en la carpeta 'p ublic/uploads'
-  let path = 'public/uploads/' + imagename;
+  let path = './blogs/public/uploads/' + imagename;
   // Guardamos el archivo en la ruta especificada
   file.mv(path,(err,result)=>{
     if(err){

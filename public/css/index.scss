@@ -39,13 +39,26 @@ header{
       padding-right: 10px;
       padding-left: 10px;
       cursor: pointer;
+      a{
+        list-style: none;
+        margin: auto 10px;
+        padding-right: 10px;
+        padding-left: 10px;
+        cursor: pointer;
+        text-transform: capitalize;
+        text-decoration: none;
+        color: black;
+      }
     }
-    li:nth-child(2){
+
+    li{
       border-right: 1px solid black;
-      border-left: 1px solid black;
       padding-right: 20px;
       padding-left: 20px;
       margin: 0;
+    }
+    li:nth-child(4){
+      border-right: none;
     }
     span{
       margin: 22px 0 18px 5px;
@@ -96,8 +109,15 @@ nav:nth-child(2){
     color: white;
     text-transform: uppercase;
     font-weight: 600px;
+    a{
+      font-size: 20px;
+      margin: 20px auto;
+      color: white;
+      text-transform: uppercase;
+      font-weight: 600px;
+    }
   }
-  li:nth-child(2){
+  li{
     border-right: none;
     border-left: none;
     margin: 0;
