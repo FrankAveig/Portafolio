@@ -14,7 +14,7 @@ const createBlog= (blog)=>{
   </div>`
 }
 
-const blogs = await getDocs(collection(db, "blogs"));
+const blogs = async() => await getDocs(collection(db, "blogs"));
 blogs.forEach((blog) => {
   if(blog.id !=decodeURI(location.pathname.split('/').pop())){
     createBlog(blog)
