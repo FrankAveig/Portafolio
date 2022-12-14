@@ -18,7 +18,7 @@ import {doc, getDoc } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-f
 let blogId = decodeURI(location.pathname.split('/').pop());
 
 const docRef = doc(db, "blogs", blogId);
-const docSnap = await getDoc(docRef);
+const docSnap = async() => await getDoc(docRef);
 
 const addArticle = (ele,data)=>{
   data = data.split('\n').filter(item=> item.length)
